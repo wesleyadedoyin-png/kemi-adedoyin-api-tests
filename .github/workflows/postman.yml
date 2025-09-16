@@ -3,7 +3,7 @@ name: Run Postman API Tests
 on:
   push:
     branches:
-      - dev
+      - Dev
   pull_request:
     branches:
       - master
