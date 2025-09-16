@@ -329,7 +329,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "9107be68-655a-4de7-bc89-051ea0718dc4",
+				"id": "871062f3-1947-4fe8-a36b-c5751929670f",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -340,7 +340,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ba6e737e-2f9e-441a-a3c6-bbfdebb47777",
+				"id": "5d8388ba-04cd-4683-8923-c13a8e794aaa",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -352,11 +352,11 @@
 	"variable": [
 		{
 			"key": "base_url",
-			"value": ""
+			"value": "https://reqres.in"
 		},
 		{
 			"key": "key",
-			"value": ""
+			"value": "reqres-free-v1"
 		}
 	]
 }
