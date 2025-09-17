@@ -334,109 +334,6 @@
 			"name": "No authorization",
 			"item": [
 				{
-					"name": "List Users",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "693024bb-b4f0-4e2a-8b83-466c3b50e1a7",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"pm.test(\"Response time is less than 2000ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
-									"});\r",
-									"pm.test(\"Status message is OK\", ()=> {\r",
-									"    pm.response.to.have.status(\"OK\");\r",
-									"});\r",
-									"pm.test(\"Check page value\", function () {\r",
-									"    const jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.page).to.eql(2);\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "d07bbad1-e5bf-45f2-9e27-b7d3eb0d28e2",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "x-api-key",
-								"value": "{{key}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{base_url}}/api/users?page=2",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"users"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "2"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Single User",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "fbdfbe27-1ed9-42e2-a71e-57421f701d30",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"pm.test(\"Response time is less than 1500ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
-									"});\r",
-									"pm.test(\"Status message is OK\", ()=> {\r",
-									"    pm.response.to.have.status(\"OK\");\r",
-									"});\r",
-									"pm.test(\"Validate user details \", function () {\r",
-									"    const jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.data.id).to.eql(2);\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "49c560a4-fd68-47ed-a167-8d4fd6ba883d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "x-api-key",
-								"value": "{{key}}",
-								"type": "text"
-							}
-						],
-						"url": "{{base_url}}/api/users/2"
-					},
-					"response": []
-				},
-				{
 					"name": "Create User",
 					"event": [
 						{
@@ -473,7 +370,8 @@
 							{
 								"key": "x-api-key",
 								"value": "{{key}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
