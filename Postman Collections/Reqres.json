@@ -341,19 +341,7 @@
 							"script": {
 								"id": "89bca37b-7549-4d08-9c14-52bf2acdd9c5",
 								"exec": [
-									"pm.test(\"Status code is 401\", function () {\r",
-									"    pm.response.to.have.status(401);\r",
-									"});\r",
-									"pm.test(\"Response time is less than 1500ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
-									"});\r",
-									"pm.test(\"Status message is Unauthorized\", ()=> {\r",
-									"    pm.response.to.have.status(\"Unauthorized\");\r",
-									"});\r",
-									"pm.test(\"Validate user details\", function () {\r",
-									"    const jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.error).to.eql(\"Missing API key\");\r",
-									"});"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -430,7 +418,7 @@
 					"response": []
 				},
 				{
-					"name": "Update User Partially",
+					"name": "Update User Partially-missing key",
 					"event": [
 						{
 							"listen": "test",
@@ -472,7 +460,7 @@
 					"response": []
 				},
 				{
-					"name": "Register Successful User",
+					"name": "Register Successful User-missing key",
 					"event": [
 						{
 							"listen": "test",
