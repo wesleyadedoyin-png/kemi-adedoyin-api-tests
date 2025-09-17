@@ -514,7 +514,43 @@
 					"response": []
 				}
 			],
-			"id": "b2a1cf80-39cb-4e94-83e3-8a769ba7c9f7"
+			"id": "b2a1cf80-39cb-4e94-83e3-8a769ba7c9f7",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a5fa5a1c-1677-4b10-9a83-c8c1adf84eb3",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "3a342d70-f76e-4441-b033-d85c086f0618",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+							"});\r",
+							"pm.test(\"Status message is Unauthorized\", ()=> {\r",
+							"    pm.response.to.have.status(\"Unauthorized\");\r",
+							"});\r",
+							"pm.test(\"Validate user details\", function () {\r",
+							"    const jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.error).to.eql(\"Missing API key\");\r",
+							"});"
+						]
+					}
+				}
+			]
 		}
 	],
 	"event": [
