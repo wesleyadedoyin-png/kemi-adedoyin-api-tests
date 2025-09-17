@@ -334,7 +334,7 @@
 			"name": "No authorization",
 			"item": [
 				{
-					"name": "Create User",
+					"name": "Create User-missing key",
 					"event": [
 						{
 							"listen": "test",
@@ -388,7 +388,7 @@
 					"response": []
 				},
 				{
-					"name": "Update User Fully",
+					"name": "Update User Fully-missing key",
 					"event": [
 						{
 							"listen": "test",
@@ -519,7 +519,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a5fa5a1c-1677-4b10-9a83-c8c1adf84eb3",
+						"id": "91d370dd-4ec1-4211-923c-5d32e1833041",
 						"type": "text/javascript",
 						"packages": {},
 						"exec": [
@@ -530,7 +530,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3a342d70-f76e-4441-b033-d85c086f0618",
+						"id": "bf35c295-0346-442f-b243-6d0d4b62399a",
 						"type": "text/javascript",
 						"packages": {},
 						"exec": [
@@ -543,7 +543,7 @@
 							"pm.test(\"Status message is Unauthorized\", ()=> {\r",
 							"    pm.response.to.have.status(\"Unauthorized\");\r",
 							"});\r",
-							"pm.test(\"Validate user details\", function () {\r",
+							"pm.test(\"check for missng api key\", function () {\r",
 							"    const jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.error).to.eql(\"Missing API key\");\r",
 							"});"
