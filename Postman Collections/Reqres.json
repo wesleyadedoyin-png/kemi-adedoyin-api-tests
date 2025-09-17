@@ -395,21 +395,7 @@
 							"script": {
 								"id": "89bca37b-7549-4d08-9c14-52bf2acdd9c5",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"pm.test(\"Response time is less than 2000ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
-									"});\r",
-									"pm.test(\"Status message is OK\", ()=> {\r",
-									"    pm.response.to.have.status(\"OK\");\r",
-									"});\r",
-									"pm.test(\"Check for user update\", function () {\r",
-									"    const jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.name).to.eql(\"morpheus\");\r",
-									"    pm.expect(jsonData.job).to.eql(\"zion resident\");\r",
-									"\r",
-									"});"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -451,21 +437,7 @@
 							"script": {
 								"id": "89bca37b-7549-4d08-9c14-52bf2acdd9c5",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"pm.test(\"Response time is less than 2000ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
-									"});\r",
-									"pm.test(\"Status message is OK\", ()=> {\r",
-									"    pm.response.to.have.status(\"OK\");\r",
-									"});\r",
-									"pm.test(\"Check for user update\", function () {\r",
-									"    const jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.name).to.eql(\"morpheus\");\r",
-									"    pm.expect(jsonData.job).to.eql(\"zion resident\");\r",
-									"\r",
-									"});"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -482,7 +454,8 @@
 							{
 								"key": "x-api-key",
 								"value": "{{key}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
@@ -506,19 +479,7 @@
 							"script": {
 								"id": "89bca37b-7549-4d08-9c14-52bf2acdd9c5",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"pm.test(\"Response time is less than 2000ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
-									"});\r",
-									"pm.test(\"Status message is OK\", ()=> {\r",
-									"    pm.response.to.have.status(\"OK\");\r",
-									"});\r",
-									"pm.test(\"Check user's id\", function () {\r",
-									"    const jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.id).to.be.a(\"number\");\r",
-									"});"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -535,7 +496,8 @@
 							{
 								"key": "x-api-key",
 								"value": "{{key}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
