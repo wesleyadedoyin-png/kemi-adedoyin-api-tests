@@ -6,6 +6,11 @@
 	},
 	"item": [
 		{
+			"name": "Happy path",
+			"item": [],
+			"id": "05ed61d1-2501-4556-916c-35adc509bd71"
+		},
+		{
 			"name": "List Users",
 			"event": [
 				{
