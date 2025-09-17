@@ -348,7 +348,7 @@
 									"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
 									"});\r",
 									"pm.test(\"Status message is Unauthorized\", ()=> {\r",
-									"    pm.response.to.have.status(\"Unautorized\");\r",
+									"    pm.response.to.have.status(\"Unauthorized\");\r",
 									"});\r",
 									"pm.test(\"Validate user details\", function () {\r",
 									"    const jsonData = pm.response.json();\r",
@@ -426,7 +426,8 @@
 							{
 								"key": "x-api-key",
 								"value": "{{key}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
