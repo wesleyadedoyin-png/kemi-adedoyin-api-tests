@@ -16,6 +16,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Postman Collection via CLI
-        run: npx postman-cli collection run "48432856-edeb93fd-a917-42d0-9eb9-7d14fb02fcf2"
+        run: npx postman-cli collection run "48432856-624593b9-c260-4a3c-a2f0-c8c69bc724ad"
         env:
           POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
